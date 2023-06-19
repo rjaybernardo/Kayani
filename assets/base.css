@@ -1,0 +1,16 @@
+/* :root{
+    --width : {{settings.page_width}}px;
+    --break-point: 960px;
+} */
+
+.width {
+  max-width: var(--page-width);
+  /* width: calc(100% - 40px); */
+  margin-inline: auto;
+}
+
+@media (min-width: var(--break-point)) {
+  .width {
+    width: calc(100% - 80px);
+  }
+}
