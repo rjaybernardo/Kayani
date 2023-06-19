@@ -1,0 +1,43 @@
+<div class="announcement-bar">
+  <p class="announcement-text">
+    {{ section.settings.text }}
+  </p>
+</div>
+
+<style>
+  .announcement-bar {
+    background-color: var(--color-beige);
+    height: 50px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+  }
+
+  .announcement-text {
+    color: var(--color-light);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 800px) {
+    .announcement-text {
+      display: none;
+    }
+    .announcement-bar {
+      height: 25px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Announcement-bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Tax free - free shipping within norway / worldwide shipping",
+      "label": "Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

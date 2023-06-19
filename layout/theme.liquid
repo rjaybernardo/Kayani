@@ -11,12 +11,14 @@
         --font-heading-family:{{ settings.header_font }}
         --page-width: {{ settings.page_width }}px;
         --collections-width:{{ settings.collections_width }}px;
-        --color-dark-text:{{ settings.dark }};
-        --color-light-text:{{ settings.light }};
-        --color-accent-text:{{ settings.accent }};
-        --color-beige-text:{{ settings.beige }};
-        --color-brown-text:{{ settings.brown }};
-        --break-point: 960px;
+        --color-dark:{{ settings.dark }};
+        --color-light:{{ settings.light }};
+        --color-accent:{{ settings.accent }};
+        --color-beige:{{ settings.beige }};
+        --color-brown:{{ settings.brown }};
+        --break-point: 800px;
+        --font-body-size: 24px;
+        --font-heading-size: 48px;
       }
 
       /* Reset */
@@ -35,6 +37,7 @@
       body {
         min-height: 100%;
         margin: 0;
+        font-size:var(--font-body-size)
       }
 
       img,
@@ -63,7 +66,7 @@
     <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
   </head>
   <body>
-    {% section 'header' %}
+    {% sections 'header-group' %}
     {{ content_for_layout }}
   </body>
 </html>
