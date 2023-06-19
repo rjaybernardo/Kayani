@@ -14,7 +14,7 @@
         "type": "range",
         "id": "page_width",
         "label": "Page width",
-        "default": 1200,
+        "default": 1450,
         "min": 800,
         "max": 1600,
         "step": 50

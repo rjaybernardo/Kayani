@@ -1,12 +1,44 @@
 <div class="width">
-  <h1>Kayani</h1>
+  <a href="/" class="header-logo">
+    <img
+      src="{{ section.settings.logo | image_url }}"
+      width="{{ section.settings.logo_width }}"
+      height="auto"
+      alt="{{ shop.name }}"
+      loading="lazy"
+    >
+  </a>
 </div>
+<style>
+  header {
+    padding: 9px 0;
+  }
+  .header-logo{
+    max-width:{{ section.settings.logo_width }}px;
+    display:block;
+  }
+</style>
 
 {% schema %}
-  {
-    "name": "Header",
-    "tag": "header",
-    "class": "header",
-    "settings": []
-  }
+{
+  "name": "Header",
+  "tag": "header",
+  "class": "header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width",
+      "default": 100,
+      "min": 20,
+      "max": 300,
+      "step": 5
+    }
+  ]
+}
 {% endschema %}
