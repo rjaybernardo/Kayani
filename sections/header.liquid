@@ -10,14 +10,22 @@
   </a>
 </div>
 <style>
+  .width {
+    width: min(95%, {{settings.page_width}}px);
+  }
+</style>
+
+{% style %}
   header {
     padding: 9px 0;
+    border-bottom: 1px solid #cccccc;
   }
+
   .header-logo{
     max-width:{{ settings.logo_width }}px;
     display:block;
   }
-</style>
+{% endstyle %}
 
 {% schema %}
 {

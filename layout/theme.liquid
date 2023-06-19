@@ -6,64 +6,66 @@
     <title>Kayani</title>
     {{ content_for_header }}
     {% style %}
-      :root{
-        --font-body-family:{{ settings.body_font }};
-        --font-heading-family:{{ settings.header_font }}
-        --page-width: {{ settings.page_width }}px;
-        --collections-width:{{ settings.collections_width }}px;
-        --color-dark:{{ settings.dark }};
-        --color-light:{{ settings.light }};
-        --color-accent:{{ settings.accent }};
-        --color-beige:{{ settings.beige }};
-        --color-brown:{{ settings.brown }};
-        --break-point: 800px;
-        --font-body-size: 24px;
-        --font-heading-size: 48px;
+       :root {
+         --font-body-family:{{ settings.body_font }};
+         --font-heading-family:{{ settings.header_font }}
+         --page-width: {{ settings.page_width }}px;
+         --collections-width:{{ settings.collections_width }}px;
+         --color-dark:{{ settings.dark }};
+         --color-light:{{ settings.light }};
+         --color-accent:{{ settings.accent }};
+         --color-beige:{{ settings.beige }};
+         --color-brown:{{ settings.brown }};
+         --break-point: 800px;
+         --font-body-size: 24px;
+         --font-heading-size: 48px;
       }
 
-      /* Reset */
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
+       /* Reset */
+       *,
+       *::before,
+       *::after {
+         box-sizing: inherit;
+       }
 
-      html {
-        box-sizing: border-box;
-        height: 100%;
-      }
+       html {
+         box-sizing: border-box;
+         height: 100%;
+       }
 
 
-      body {
-        min-height: 100%;
-        margin: 0;
-        font-size:var(--font-body-size)
-      }
+       body {
+         max-width: 1920px;
+         min-height: 100%;
+         margin: 0;
+         font-size:var(--font-body-size);
+       }
 
-      img,
-      svg {
-        display: block;
-        width: 100%;
-      }
+       img,
+       svg {
+         display: block;
+         width: 100%;
+       }
 
-      button,
-      input,
-      select,
-      textarea {
-        outline: none;
-        border: none;
-        background: transparent;
-      }
+       button,
+       input,
+       select,
+       textarea {
+         outline: none;
+         border: none;
+         background: transparent;
+       }
 
-      a {
-        text-decoration: none;
-      }
+       a {
+         text-decoration: none;
+       }
 
-      li {
-        list-style: none;
-      }
+       li {
+         list-style: none;
+       }
     {% endstyle %}
-    <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
   </head>
   <body>
     {% sections 'header-group' %}

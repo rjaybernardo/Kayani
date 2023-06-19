@@ -1,7 +1,6 @@
 .width {
-  max-width: var(--page-width);
-  width: calc(100% - 40px);
   margin-inline: auto;
+  width: var(--page-width);
 }
 
 @media (min-width: var(--break-point)) {
