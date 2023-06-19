@@ -1,7 +1,7 @@
 <div class="width">
   <a href="/" class="header-logo">
     <img
-      src="{{ section.settings.logo | image_url }}"
+      src="{{ settings.logo | image_url }}"
       width="{{ section.settings.logo_width }}"
       height="auto"
       alt="{{ shop.name }}"
@@ -14,7 +14,7 @@
     padding: 9px 0;
   }
   .header-logo{
-    max-width:{{ section.settings.logo_width }}px;
+    max-width:{{ settings.logo_width }}px;
     display:block;
   }
 </style>
@@ -23,22 +23,6 @@
 {
   "name": "Header",
   "tag": "header",
-  "class": "header",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "logo",
-      "label": "Logo"
-    },
-    {
-      "type": "range",
-      "id": "logo_width",
-      "label": "Logo width",
-      "default": 100,
-      "min": 20,
-      "max": 300,
-      "step": 5
-    }
-  ]
+  "class": "header"
 }
 {% endschema %}

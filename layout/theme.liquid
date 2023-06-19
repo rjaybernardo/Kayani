@@ -7,7 +7,15 @@
     {{ content_for_header }}
     {% style %}
       :root{
+        --font-body-family:{{ settings.body_font }};
+        --font-heading-family:{{ settings.header_font }}
         --page-width: {{ settings.page_width }}px;
+        --collections-width:{{ settings.collections_width }}px;
+        --color-dark-text:{{ settings.dark }};
+        --color-light-text:{{ settings.light }};
+        --color-accent-text:{{ settings.accent }};
+        --color-beige-text:{{ settings.beige }};
+        --color-brown-text:{{ settings.brown }};
         --break-point: 960px;
       }
 
