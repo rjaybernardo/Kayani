@@ -4,8 +4,8 @@
     "theme_name": "Kayani",
     "theme_version": "1",
     "theme_author": "Raphael Jay Bernardo",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https://www.naturalabs.io/",
+    "theme_support_url": "https://www.naturalabs.io/"
   },
   {
     "name": "Logo",
@@ -123,5 +123,14 @@
         "step": 20
       }
     ]
+  },
+  {
+    "type": "range",
+    "id": "breakpoint",
+    "label": "Breakpoint",
+    "default": 800,
+    "min": 0,
+    "max": 2000,
+    "step": 100
   }
 ]

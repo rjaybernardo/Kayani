@@ -1,16 +1,4 @@
-:root {
-  --break-point: 800px;
-  --font-body-size: 24px;
-  --font-heading-size: 48px;
-}
-
 header .width {
   width: min(95%, var(--page-width));
   margin-inline: auto;
-}
-
-@media (min-width: var(--break-point)) {
-  .width {
-    width: calc(100% - 80px);
-  }
 }

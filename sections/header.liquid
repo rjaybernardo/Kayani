@@ -1,4 +1,66 @@
-<div class="width">
+<style>
+    header {
+      padding: 9px 0;
+      border-bottom: 1px solid #cccccc;
+      text-transform: uppercase;
+    }
+    .header-logo {
+      max-width: 128px;
+      display: block;
+    }
+
+    header nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+    nav svg{
+    width: 24px;
+    height: 24px;
+  }
+  .mobile-cart{
+    display:block;
+  }
+    .icon-links,
+    .desktop-menu,
+    .header-nav{
+      display:none;
+    }
+    @media screen and (min-width: 965px) {
+      .menu-bar,
+      .mobile-cart{
+        display:none;
+      }
+      .header-logo{
+        max-width:{{ settings.logo_width }}px;
+      }
+      .desktop-menu{
+        display: flex;
+        align-items: center;
+      }
+      .icon-links,
+      .header-nav{
+        display: flex;
+        gap:25px;
+      }
+      .icon-links{
+        display:flex;
+        align-items: center;
+      }
+      .icon-links li.cart{
+        display: flex;
+        align-items: center;
+        gap:7px;
+      }
+
+    }
+</style>
+
+<nav class="width">
+  <a href="#" class="menu-bar">
+    <i> menu </i>
+  </a>
   <a href="/" class="header-logo">
     <img
       src="{{ settings.logo | image_url }}"
@@ -8,25 +70,51 @@
       loading="lazy"
     >
   </a>
-</div>
-<style></style>
 
-{% style %}
-  header {
-    padding: 9px 0;
-    border-bottom: 1px solid #cccccc;
-  }
+  <a href="#" class="mobile-cart">
+    <i>
+      {% render 'icon-cart' %}
+    </i>
+  </a>
 
-  .header-logo{
-    max-width:{{ settings.logo_width }}px;
-    display:block;
-  }
-{% endstyle %}
+  <div class="desktop-menu">
+    <ul class="header-nav">
+      {% for link in section.settings.navigation.links %}
+        <li>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="icon-links">
+      <li>
+        <a href="#">{% render 'icon-search' %}</a>
+      </li>
+      <li>
+        <a href="#">
+          {% render 'icon-profile' %}
+        </a>
+      </li>
+      <li class="cart">
+        <p>CART</p>
+        <span>{% render 'icon-cart' %}</span>
+        <span class="cart-count">0</span>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 {% schema %}
 {
   "name": "Header",
   "tag": "header",
-  "class": "header"
+  "class": "header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "navigation",
+      "label": "Navigation menu",
+      "default": "main-menu"
+    }
+  ]
 }
 {% endschema %}
