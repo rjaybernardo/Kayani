@@ -1,3 +1,31 @@
+/* Announcement */
+
+.announcement-bar {
+  height: 25px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  color: var(--color-light);
+  background-color: var(--color-beige);
+}
+.announcement-text {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .announcement-bar {
+    height: 50px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+  }
+
+  .announcement-text {
+    display: block;
+  }
+}
+
+/* Header */
 header .width {
   width: min(95%, var(--page-width));
   margin-inline: auto;

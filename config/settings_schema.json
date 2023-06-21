@@ -5,7 +5,8 @@
     "theme_version": "1",
     "theme_author": "Raphael Jay Bernardo",
     "theme_documentation_url": "https://www.naturalabs.io/",
-    "theme_support_url": "https://www.naturalabs.io/"
+    "theme_support_url": "https://www.naturalabs.io/",
+    "theme_support_email": "https://www.naturalabs.io/"
   },
   {
     "name": "Logo",
@@ -35,21 +36,21 @@
       },
       {
         "type": "color",
-        "id": "dark",
+        "id": "color_dark",
         "default": "#141414",
         "label": "Dark",
         "info": "Dark color"
       },
       {
         "type": "color",
-        "id": "light",
+        "id": "color_light",
         "default": "#FFFFFF",
         "label": "Light",
         "info": "Light color"
       },
       {
         "type": "color",
-        "id": "accent",
+        "id": "color_accent",
         "default": "#F9EDEB",
         "label": "Accent",
         "info": "Accent color"
@@ -60,14 +61,14 @@
       },
       {
         "type": "color",
-        "id": "beige",
+        "id": "color_beige",
         "default": "#B2967D",
         "label": "Beige",
         "info": "Beige color"
       },
       {
         "type": "color",
-        "id": "brown",
+        "id": "color_brown",
         "default": "#5A3B21",
         "label": "Brown",
         "info": "Brown color"
